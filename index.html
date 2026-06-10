@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart GPA Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="summary-panel" aria-labelledby="app-title">
+        <div>
+          <p class="eyebrow">Academic Planner</p>
+          <h1 id="app-title">Smart GPA Calculator</h1>
+          <p class="intro">
+            Track courses, credits, semester GPA, and cumulative GPA in one fast workspace.
+          </p>
+        </div>
+
+        <div class="stats-grid" aria-label="GPA summary">
+          <article class="stat">
+            <span>Current GPA</span>
+            <strong id="cumulative-gpa">0.00</strong>
+          </article>
+          <article class="stat">
+            <span>Total Credits</span>
+            <strong id="total-credits">0</strong>
+          </article>
+          <article class="stat">
+            <span>Quality Points</span>
+            <strong id="quality-points">0.00</strong>
+          </article>
+        </div>
+      </section>
+
+      <section class="workspace" aria-label="Course calculator">
+        <div class="toolbar">
+          <div>
+            <h2>Course List</h2>
+            <p>Your entries are saved automatically on this device.</p>
+          </div>
+          <div class="toolbar-actions">
+            <button class="button ghost" id="reset-data" type="button">Reset</button>
+            <button class="button primary" id="add-course" type="button">Add Course</button>
+          </div>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Course</th>
+                <th scope="col">Credits</th>
+                <th scope="col">Grade</th>
+                <th scope="col">Points</th>
+                <th scope="col"><span class="sr-only">Actions</span></th>
+              </tr>
+            </thead>
+            <tbody id="course-list"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <template id="course-row-template">
+      <tr>
+        <td data-label="Course">
+          <input class="course-name" type="text" placeholder="Course name" />
+        </td>
+        <td data-label="Credits">
+          <input class="course-credits" type="number" min="0" step="1" value="3" />
+        </td>
+        <td data-label="Grade">
+          <select class="course-grade" aria-label="Grade">
+            <option value="4">A</option>
+            <option value="3.7">A-</option>
+            <option value="3.3">B+</option>
+            <option value="3">B</option>
+            <option value="2.7">B-</option>
+            <option value="2.3">C+</option>
+            <option value="2">C</option>
+            <option value="1.7">C-</option>
+            <option value="1">D</option>
+            <option value="0">F</option>
+          </select>
+        </td>
+        <td data-label="Points" class="row-points">12.00</td>
+        <td class="row-actions">
+          <button class="icon-button remove-course" type="button" aria-label="Remove course">x</button>
+        </td>
+      </tr>
+    </template>
+
+    <script src="script.js"></script>
+  </body>
+</html>
