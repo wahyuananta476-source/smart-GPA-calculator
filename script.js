@@ -6,6 +6,8 @@ const defaultCourses = [
   { name: "Database Systems", credits: 3, grade: 3.3 },
 ];
 
+//fungsi dari document.querySelector adalah untuk mengembalikan elemen pertama dalam dokumen yang cocok dengan pemilih CSS yang ditentukan, atau kelompok pemilih CSS. Jika tidak ditemukan kecocokan, nilai `null` akan dikembalikan.
+//sumber : https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector
 const courseList = document.querySelector("#course-list");
 const rowTemplate = document.querySelector("#course-row-template");
 const cumulativeGpa = document.querySelector("#cumulative-gpa");
