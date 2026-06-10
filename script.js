@@ -1,13 +1,15 @@
 const STORAGE_KEY = "smart-gpa-calculator-courses";
+//fungsi dari const storage_key untuk
+//sumber : 
 
 const defaultCourses = [
   { name: "Data Structures", credits: 3, grade: 4 },
   { name: "Web Programming", credits: 3, grade: 3.7 },
   { name: "Database Systems", credits: 3, grade: 3.3 },
 ];
+//fungsi dari defaultcourses untuk memungkinkan parameter bernama diinisialisasi dengan nilai default jika tidak ada nilai atau undefined yang diberikan … , /* …, */ paramN = defaultValueN) { // … } Dalam JavaScript, parameter fungsi secara default bernilai undefined. … Namun, seringkali berguna untuk menetapkan nilai default yang berbeda. Di sinilah parameter default dapat membantu.
+//sumber : https://developer.mozilla.org/en-US/search?q=const+defaultCourses
 
-//fungsi dari document.querySelector adalah untuk mengembalikan elemen pertama dalam dokumen yang cocok dengan pemilih CSS yang ditentukan, atau kelompok pemilih CSS. Jika tidak ditemukan kecocokan, nilai `null` akan dikembalikan.
-//sumber : https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector
 const courseList = document.querySelector("#course-list");
 const rowTemplate = document.querySelector("#course-row-template");
 const cumulativeGpa = document.querySelector("#cumulative-gpa");
@@ -15,8 +17,12 @@ const totalCredits = document.querySelector("#total-credits");
 const qualityPoints = document.querySelector("#quality-points");
 const addCourseButton = document.querySelector("#add-course");
 const resetButton = document.querySelector("#reset-data");
+//fungsi dari document.querySelector adalah untuk mengembalikan elemen pertama dalam dokumen yang cocok dengan pemilih CSS yang ditentukan, atau kelompok pemilih CSS. Jika tidak ditemukan kecocokan, nilai `null` akan dikembalikan.
+//sumber : https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector
 
 const cloneCourses = (courseItems) => courseItems.map((course) => ({ ...course }));
+//fungsi dari clone courses untuk membuat salinan data baru tanpa mengubah struktur data aslinya
+//sumber : https://coreui.io/blog/how-to-clone-an-object-in-javascript/
 
 const readCourses = () => {
   const storedCourses = localStorage.getItem(STORAGE_KEY);
@@ -32,6 +38,8 @@ const readCourses = () => {
     return cloneCourses(defaultCourses);
   }
 };
+//fungsi dari read courses untuk
+//sumber :
 
 let courses = readCourses();
 
