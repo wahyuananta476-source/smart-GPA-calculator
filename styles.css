@@ -11,6 +11,7 @@
   --danger: #b84a4a;
   --shadow: 0 18px 50px rgba(27, 45, 37, 0.12);
 }
+/*fungsi : root cocok dengan elemen akar dari pohon yang mewakili dokumen. Dalam HTML, :root mewakili elemen <html> dan identik dengan selektor html, kecuali bahwa spesifisitasnya (0-1-0) lebih tinggi daripada html (0-0-1).*/
 
 * {
   box-sizing: border-box;
