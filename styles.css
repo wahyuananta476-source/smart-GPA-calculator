@@ -12,10 +12,13 @@
   --shadow: 0 18px 50px rgba(27, 45, 37, 0.12);
 }
 /*fungsi : root cocok dengan elemen akar dari pohon yang mewakili dokumen. Dalam HTML, :root mewakili elemen <html> dan identik dengan selektor html, kecuali bahwa spesifisitasnya (0-1-0) lebih tinggi daripada html (0-0-1).*/
+/*sumber : https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:root*/
 
 * {
   box-sizing: border-box;
 }
+/*fungsi : Properti CSS box-sizing mengatur cara penghitungan total lebar dan tinggi suatu elemen.*/
+/*sumber : https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/box-sizing*/
 
 body {
   min-height: 100vh;
@@ -27,18 +30,27 @@ body {
   color: var(--ink);
   font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
+/*untuk mengatur tampilan utama halaman web.*/
+/*fungsi : CSS linear-gradient() membuat gambar yang terdiri dari transisi progresif antara dua warna atau lebih di sepanjang garis lurus. Hasilnya adalah objek dengan tipe data <gradient>, yang merupakan jenis khusus dari <image>.*/
+/*sumber : https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/gradient/linear-gradient */
 
 button,
 input,
 select {
   font: inherit;
 }
+/*untuk membuat button, input dan select menggunakan font yang sama dengan elemen induk.*/
+/*fungsi : Properti CSS `font` mengatur semua properti berbeda dari font suatu elemen. Alternatifnya, properti ini mengatur font elemen ke font sistem.*/
+/*sumber : https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/font*/
 
 .app-shell {
   width: min(1120px, calc(100% - 32px));
   margin: 0 auto;
   padding: 48px 0;
 }
+/*untuk mengatur lebar maksimal halaman dan posisi agar berada di tengah layar.*/
+/*fungsi : Properti CSS `width` mengatur lebar suatu elemen. Secara default, properti ini mengatur lebar area konten, tetapi jika `box-sizing` diatur ke `border-box`, maka properti ini mengatur lebar area border. dan Properti CSS `margin`, singkatan dari CSS, mengatur area margin di keempat sisi suatu elemen.*/
+/*sumber : https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/width dan https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/margin*/
 
 .summary-panel {
   display: grid;
@@ -53,6 +65,8 @@ select {
   box-shadow: var(--shadow);
   backdrop-filter: blur(12px);
 }
+/*fungsi : Modul tata letak grid CSS sangat unggul dalam membagi halaman menjadi wilayah utama atau mendefinisikan hubungan dalam hal ukuran, posisi, dan lapisan antara bagian-bagian kontrol yang dibangun dari elemen dasar HTML.*/
+/*sumber : https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Grid_layout*/
 
 .eyebrow {
   margin: 0 0 12px;
@@ -90,6 +104,9 @@ h1 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 12px;
 }
+/*untuk membuat tampilan statistik*/
+/*fungsi : Properti CSS grid-template-columns mendefinisikan nama baris dan fungsi pengaturan ukuran kolom grid.*/
+/*sumber : https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/grid-template-columns*/
 
 .stat {
   min-width: 0;
@@ -120,6 +137,9 @@ h1 {
   background: var(--panel);
   box-shadow: var(--shadow);
 }
+/*untuk membuat panel utama yang berisi tabel data.*/
+/*fungsi : Properti CSS `border-radius` membulatkan sudut tepi luar suatu elemen. Anda dapat mengatur satu radius untuk membuat sudut melingkar, atau dua radius untuk membuat sudut elips.*/
+/*sumber : https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/border-radius*/
 
 .toolbar {
   display: flex;
@@ -129,6 +149,8 @@ h1 {
   padding: 22px 24px;
   border-bottom: 1px solid var(--line);
 }
+/*fungsi : Modul CSS flexible box layout mendefinisikan model kotak CSS yang dioptimalkan untuk desain antarmuka pengguna, dan tata letak item dalam satu dimensi.*/
+/*sumber : https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Flexible_box_layout*/
 
 .toolbar h2 {
   margin-bottom: 6px;
@@ -163,6 +185,9 @@ h1 {
     border-color 160ms ease,
     background 160ms ease;
 }
+/*untuk styling tombol dan efek hover*/
+/*fungsi : Transisi memungkinkan untuk mendefinisikan transisi antara dua keadaan suatu elemen. Keadaan yang berbeda dapat didefinisikan menggunakan pseudo-class seperti :hover atau :active atau diatur secara dinamis menggunakan JavaScript.*/
+/*sumber : https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/transition*/
 
 .button:hover,
 .icon-button:hover {
@@ -196,6 +221,9 @@ table {
   width: 100%;
   border-collapse: collapse;
 }
+/*untuk mengatur tampilan tabel*/
+/*fungsi : Properti CSS border-collapse menentukan apakah sel-sel di dalam <table> memiliki batas bersama atau terpisah.*/
+/*sumber : https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/border-collapse*/
 
 th,
 td {
@@ -237,6 +265,9 @@ select:focus {
   border-color: var(--primary);
   box-shadow: 0 0 0 3px rgba(31, 122, 90, 0.14);
 }
+/*untuk styling komponen input dan select.*/
+/*fungsi : focus` mewakili elemen (seperti input formulir) yang telah menerima fokus. Ini umumnya dipicu ketika pengguna mengklik atau mengetuk elemen atau memilihnya dengan tombol Tab pada keyboard.*/
+/*sumber : https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:focus*/
 
 .row-points {
   font-weight: 800;
@@ -253,6 +284,9 @@ select:focus {
   color: var(--danger);
   font-size: 1.35rem;
 }
+/*untuk mengatur tampilan tombol hapus data.*/
+/*fungsi : Properti CSS `color` mengatur nilai warna latar depan teks dan dekorasi teks suatu elemen dan Properti CSS `background` yang disingkat mengatur semua properti gaya latar belakang sekaligus, seperti warna, gambar, asal, ukuran, dan metode pengulangan.*/
+/*sumber : https://developer.mozilla.org/en-US/docs/Web/CSS/color dan https://developer.mozilla.org/en-US/docs/Web/CSS/background*/
 
 .sr-only {
   position: absolute;
@@ -262,6 +296,9 @@ select:focus {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
 }
+/*untuk menyembunyikan elemen secara visual*/
+/*fungsi : Aksesibilitas (sering disingkat menjadi A11y — seperti, "a", lalu 11 karakter, dan kemudian "y") dalam pengembangan web berarti memungkinkan sebanyak mungkin orang untuk menggunakan situs web, bahkan ketika kemampuan orang-orang tersebut terbatas dalam beberapa hal. */
+/*sumber : https://developer.mozilla.org/en-US/docs/Web/Accessibility*/
 
 @media (max-width: 820px) {
   .app-shell {
@@ -291,6 +328,9 @@ select:focus {
     flex: 1;
   }
 }
+/*untuk responsive design untuk layar.*/
+/*fungsi : Aturan CSS `@media` dapat digunakan untuk menerapkan sebagian dari lembar gaya berdasarkan hasil dari satu atau lebih kueri media.*/
+/*sumber : https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@media*/
 
 @media (max-width: 640px) {
   table,
@@ -343,3 +383,6 @@ select:focus {
     content: "";
   }
 }
+/*untuk mengubah tampilan tabel menjadi layout vertikal pada layar kecil agar mudah dibaca.*/
+/*fungsi : Properti CSS `display` menentukan apakah suatu elemen diperlakukan sebagai blok atau kotak sebaris, serta tata letak yang digunakan untuk elemen anaknya, seperti `flow layout`, `grid`, atau `flex`.*/
+/*sumber : https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/display*/
